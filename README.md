@@ -3,7 +3,7 @@
 **Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies**
 
 [![ACL 2026](https://img.shields.io/badge/ACL-2026-4b44ce?style=flat-square)]()
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?style=flat-square)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2605.29712-b31b1b?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)]()
 
 This repository contains the official implementation of the paper *"Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies"*, accepted at **ACL 2026**.
@@ -69,18 +69,18 @@ The evaluation consists of two steps:
 ┌──────────────────────────────────────────────────────────────────┐
 │  Step 2: Fact Checker per Atomic Fact                            │
 │                                                                  │
-│  C1 — Are the subject and object mentioned in the document?     │
-│  C2 — Are their descriptions verifiable?                        │
+│  C1 — Are the subject and object mentioned in the document?      │
+│  C2 — Are their descriptions verifiable?                         │
 │  C3 — Is their relationship explicitly stated?                   │
 │  C4 — Can unverified information be inferred?                    │
 │                                                                  │
-│  Output: "Final Answer: yes" / "Final Answer: no"               │
+│  Output: "Final Answer: yes" / "Final Answer: no"                │
 └──────────────────────────────┬───────────────────────────────────┘
                                │
                                ▼
                ┌───────────────────────────────────┐
-               │  Aggregation: Claim is True iff    │
-               │  ALL atomic facts are True         │
+               │  Aggregation: Claim is True iff   │
+               │  ALL atomic facts are True        │
                └───────────────────────────────────┘
 ```
 
@@ -332,11 +332,11 @@ Our structured prompt reduces token usage by **~90%** compared to unguided think
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{ye2026teaching,
-    title = {Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies},
-    author = {Ye, Yuxuan and Santos-Rodriguez, Raul and Simpson, Edwin},
-    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
-    year = {2026}
+@article{ye2026teaching,
+  title={Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies},
+  author={Ye, Yuxuan and Santos-Rodriguez, Raul and Simpson, Edwin},
+  journal={arXiv preprint arXiv:2605.29712},
+  year={2026}
 }
 ```
 
