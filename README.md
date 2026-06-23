@@ -48,40 +48,40 @@ The result is a factuality checking pipeline that is both **efficient** (over 80
 The evaluation consists of two steps:
 
 ```
-                        ┌──────────────────────────────────────┐
-                        │           Input Claim                │
-                        └──────────────┬───────────────────────┘
-                                       │
-                                       ▼
-                        ┌─────────────────────────────┐
-                        │   Step 1: Claim Decomposer  │
-                        │   (LLM or trained SLM)      │
-                        └──────────────┬──────────────┘
-                                       │
-                                       ▼
-                           ┌─────────────────────┐
-                           │  Atomic Fact 1      │
-                           │  Atomic Fact 2      │
-                           │  Atomic Fact N      │
-                           └───────┬─────────────┘
-                                   │
-                                   ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  Step 2: Fact Checker per Atomic Fact                            │
-│                                                                  │
-│  C1 — Are the subject and object mentioned in the document?      │
-│  C2 — Are their descriptions verifiable?                         │
-│  C3 — Is their relationship explicitly stated?                   │
-│  C4 — Can unverified information be inferred?                    │
-│                                                                  │
-│  Output: "Final Answer: yes" / "Final Answer: no"                │
-└──────────────────────────────┬───────────────────────────────────┘
-                               │
-                               ▼
-               ┌───────────────────────────────────┐
-               │  Aggregation: Claim is True iff   │
-               │  ALL atomic facts are True        │
-               └───────────────────────────────────┘
+                   ┌──────────────────────────────────────┐
+                   │             Input Claim              │
+                   └──────────────────┬───────────────────┘
+                                      │
+                                      ▼
+                    ┌───────────────────────────────────┐
+                    │     Step 1: Claim Decomposer      │
+                    │       (LLM or trained SLM)        │
+                    └─────────────────┬─────────────────┘
+                                      │
+                                      ▼
+                       ┌─────────────────────────────┐
+                       │        Atomic Fact 1        │
+                       │        Atomic Fact 2        │
+                       │        Atomic Fact N        │
+                       └──────────────┬──────────────┘
+                                      │
+                                      ▼
+   ┌──────────────────────────────────────────────────────────────────────┐
+   │                 Step 2: Fact Checker per Atomic Fact                 │
+   │                                                                      │
+   │      C1 — Are the subject and object mentioned in the document?      │
+   │               C2 — Are their descriptions verifiable?                │
+   │            C3 — Is their relationship explicitly stated?             │
+   │             C4 — Can unverified information be inferred?             │
+   │                                                                      │
+   │           Output: "Final Answer: yes" / "Final Answer: no"           │
+   └──────────────────────────────────┬───────────────────────────────────┘
+                                      │
+                                      ▼
+                ┌───────────────────────────────────────────┐
+                │      Aggregation: Claim is True iff       │
+                │         ALL atomic facts are True         │
+                └───────────────────────────────────────────┘
 ```
 
 The criteria C1–C3 guide the model to locate explicit evidence in the grounding document, while C4 enables reasonable inference. Applied sequentially, they form a structured decision process that mirrors how human test-takers work through True/False reading exercises.
