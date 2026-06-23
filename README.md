@@ -1,4 +1,4 @@
-# Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies**
+# Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies
 
 [![ACL 2026](https://img.shields.io/badge/ACL-2026-4b44ce?style=flat-square)]()
 [![arXiv](https://img.shields.io/badge/arXiv-2605.29712-b31b1b?style=flat-square)]()
