@@ -316,12 +316,12 @@ The trained SLM (0.6B parameters) outperforms ChatGPT-3.5-based baselines and ac
 
 ### Token Efficiency
 
-| Model | Mode | Avg Tokens Used | vs. Thinking |
-|---|---|---|---|
-| Qwen3-4B | Instruct | 2,803 | 10.4% |
-| Qwen3-4B | Thinking | 27,001 | — |
-| Qwen3-30B | Instruct | 1,152 | 10.5% |
-| Qwen3-30B | Thinking | 10,924 | — |
+| Model | Mode | FacTax Tokens | FacTax vs. Thinking | LLM-AggreFact Tokens | LLM-AggreFact vs. Thinking |
+|---|---|---|---|---|---|
+| Qwen3-4B | Instruct | 2,803 | 10.4% | 2,132 | 12.5% |
+| Qwen3-4B | Thinking | 27,001 | — | 17,025 | — |
+| Qwen3-30B | Instruct | 1,152 | 10.5% | 1,024 | 17.7% |
+| Qwen3-30B | Thinking | 10,924 | — | 5,781 | — |
 
 Our structured prompt reduces token usage by **~90%** compared to unguided thinking mode on FacTax-Benchmark, and over **80%** on LLM-AggreFact.
 
