@@ -130,7 +130,7 @@ Test-Taking/
 - [vLLM](https://github.com/vllm-project/vllm) — LLM inference
 - [Transformers](https://github.com/huggingface/transformers)
 - [TRL](https://github.com/huggingface/trl) — SFT and DPO training
-- [Datasets](https://github.com/huggingface/datasets)
+- [Datasets](https://github.com/huggingface/datasets) - Dataset loading and processing
 - [Sentence-Transformers](https://github.com/UKPLab/sentence-transformers) — SECS evaluation
 - [Evaluate](https://github.com/huggingface/evaluate) — ROUGE-L
 - [Pandas](https://pandas.pydata.org/), [Scikit-learn](https://scikit-learn.org/) - Dataset processing and Balanced Accuracy
